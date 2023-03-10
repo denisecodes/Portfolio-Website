@@ -1,7 +1,10 @@
 from flask import Flask, render_template, request
 import os
+from dotenv import load_dotenv
 import smtplib
 app = Flask(__name__)
+
+load_dotenv()
 
 @app.route('/', methods=["GET", "POST"])
 def home():
